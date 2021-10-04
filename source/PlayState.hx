@@ -2152,7 +2152,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'running-goblin':
-						camFollow.y = dad.getMidpoint().y - 40;
+						camFollow.y = dad.getMidpoint().y - 65;
 					case 'gametoons':
 						camFollow.y = dad.getMidpoint().y + 30;
 				}
@@ -3521,7 +3521,31 @@ class PlayState extends MusicBeatState
 			{
 				changeDaddy('screamer');
 			}
-
+		//trackstar lol
+		if (curStep == 96 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
+		if (curStep == 102 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
+		if (curStep == 112 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
+		if (curStep == 160 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
+		if (curStep == 166 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
+		if (curStep == 176 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+			}
 		// yes this updates every step.
 		// yes this is bad
 		// but i'm doing it to update misses and accuracy
@@ -3585,7 +3609,7 @@ class PlayState extends MusicBeatState
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
-
+		
 		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
 		{
 			FlxG.camera.zoom += 0.015;
@@ -3598,6 +3622,7 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
+		
 		if (curBeat % gfSpeed == 0)
 		{
 			gf.dance();
