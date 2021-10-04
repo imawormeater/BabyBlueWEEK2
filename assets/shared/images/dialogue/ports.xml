@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ports.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="baby port0000" x="10" y="10" width="209" height="241"/>
+	<SubTexture name="boyfriend port0000" x="10" y="261" width="314" height="234"/>
+</TextureAtlas>
