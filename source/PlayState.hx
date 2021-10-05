@@ -3371,7 +3371,7 @@ class PlayState extends MusicBeatState
 				trainSound.play(true);
 		}
 	}
-
+	
 	var startedMoving:Bool = false;
 
 	function updateTrainPos():Void
@@ -3524,27 +3524,247 @@ class PlayState extends MusicBeatState
 		//trackstar lol
 		if (curStep == 96 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				trace('it worked');
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		if (curStep == 102 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				trace('it worked');
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		if (curStep == 112 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				trace('it worked');
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		if (curStep == 160 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				trace('it worked');
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		if (curStep == 166 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		if (curStep == 176 && curSong.toLowerCase() == 'trackstar')
 			{
-				FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.3, {ease: FlxEase.expoOut,});
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 224 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 230 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 240 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 288 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 294 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 304 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 352 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 358 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 368 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 415 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 422 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 432 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 480 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 486 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 496 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 544 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 550 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 560 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 608 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 614 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 624 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 672 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 678 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 688 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 736 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 742 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 752 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 800 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 806 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 816 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1248 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1254 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1264 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1312 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1318 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1328 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1376 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1382 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1391 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1439 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1446 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 1455 && curSong.toLowerCase() == 'trackstar')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
 			}
 		// yes this updates every step.
 		// yes this is bad
@@ -3609,6 +3829,11 @@ class PlayState extends MusicBeatState
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
+		if (curSong.toLowerCase() == 'trackstar' && curBeat >= 208 && curBeat < 304)
+			{
+				FlxG.camera.zoom += 0.15;
+				camHUD.zoom += 0.05;
+			}
 		
 		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
 		{
