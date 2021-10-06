@@ -699,7 +699,6 @@ class PlayState extends MusicBeatState
 				{
 						curStage = 'crib';
 						defaultCamZoom = 1;
-						curStage = 'stage';
 						var bg:FlxSprite = new FlxSprite(-200, -540).loadGraphic(Paths.image('floor'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
@@ -710,13 +709,36 @@ class PlayState extends MusicBeatState
 				{
 						curStage = 'crib2';
 						defaultCamZoom = 1;
-						curStage = 'stage';
 						var bg:FlxSprite = new FlxSprite(-200, -540).loadGraphic(Paths.image('floor2'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
 						add(bg);
-				}
+				}			
+			case 'street':
+				{
+						curStage = 'street';
+						defaultCamZoom = 0.9;
+						var bg:FlxSprite = new FlxSprite(-300, -178).loadGraphic(Paths.image('street'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
+						add(bg);
+				}		
+			case 'crib3':
+				{
+						curStage = 'crib3';
+						defaultCamZoom = 1;
+						var hallowTex = Paths.getSparrowAtlas('brokencrib');
+
+						halloweenBG = new FlxSprite(-275, -100);
+						halloweenBG.scrollFactor.set(1, 1);
+						halloweenBG.frames = hallowTex;
+						halloweenBG.animation.addByPrefix('idle', 'brokenhouse');
+						halloweenBG.animation.play('idle');
+						halloweenBG.antialiasing = true;
+						add(halloweenBG);
+				}			
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -832,6 +854,7 @@ class PlayState extends MusicBeatState
 			case 'evil-baby':
 				dad.y += 350;
 				dad.x += 125;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 300);
 			case 'gametoons':
 				dad.y += 370;
 				dad.x += 200;
@@ -843,15 +866,20 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
 
 		// REPOSITIONING PER STAGE
-		gf.y += -1000;
 		switch (curStage)
 		{
 			case 'crib':
 				//WORK YOU COCK SUCKING MOTHERFUCKER
-				gf.y += 900;
+				gf.y += -1200;
 			case 'crib2':
 				//WORK YOU COCK SUCKING MOTHERFUCKER
-				gf.y += 900;
+				gf.y += -1200;
+			case 'crib3':
+				//WORK YOU COCK SUCKING MOTHERFUCKER
+				gf.y += -1200;
+			case 'street':
+				//WORK YOU COCK SUCKING MOTHERFUCKER
+				gf.y += -1200;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 700;
@@ -887,7 +915,6 @@ class PlayState extends MusicBeatState
 				gf.x += 180;
 				gf.y += 300;
 		}
-
 		add(gf);
 
 		// Shitty layering but whatev it works LOL
