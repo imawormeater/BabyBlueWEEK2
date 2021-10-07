@@ -33,6 +33,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
 
+	var poop:Int = 0;
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
 	public static var firstStart:Bool = true;
@@ -118,7 +119,7 @@ class MainMenuState extends MusicBeatState
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, gameVer +  (Main.watermarks ? " FNF - " + kadeEngineVer + " Kade Engine" : ""), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+		//add(versionShit);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -140,6 +141,27 @@ class MainMenuState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+		}
+
+		if (FlxG.keys.justPressed.P)
+			if (poop == 0) poop = 1;
+			else poop == 0;
+
+		if (FlxG.keys.justPressed.O)
+			if (poop == 1) poop = 2;
+			else poop == 0;
+		
+		if (FlxG.keys.justPressed.O)
+			if (poop == 2) poop = 3;
+			else poop == 0;
+			
+		if (FlxG.keys.justPressed.P)
+			if (poop == 3) poop = 4;
+			else poop == 0;
+
+		if (poop == 4)
+		{
+			FlxG.switchState(new CrashState());
 		}
 
 		if (!selectedSomethin)
