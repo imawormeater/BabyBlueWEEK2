@@ -26,7 +26,7 @@ class StoryMenuState extends MusicBeatState
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
 		['Nap-Time', 'Kidz-Bop', 'Baby-Blue'],
-		['Babys-Revenge', 'Un-Adieu', 'Temper-Tantrum', 'Trackstar']
+		['Temper-Tantrum', 'Babys-Revenge', 'Un-Adieu', 'Trackstar']
 	];
 	var curDifficulty:Int = 1;
 
@@ -288,6 +288,13 @@ class StoryMenuState extends MusicBeatState
 			PlayState.SONG = Song.loadFromJson(StringTools.replace(PlayState.storyPlaylist[0]," ", "-").toLowerCase() + diffic, StringTools.replace(PlayState.storyPlaylist[0]," ", "-").toLowerCase());
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
+			if (curWeek == 2) {
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					LoadingState.loadAndSwitchState(new VideoState(Paths.video('babycut1'), new PlayState()));
+				});
+			}
+
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
