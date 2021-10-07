@@ -58,6 +58,26 @@ class DialogueBox extends FlxSpriteGroup
 					FlxG.sound.playMusic(Paths.music('babytheme'), 0.485);
 					FlxG.sound.music.fadeIn(1, 0, 0.8);
 				}
+			case 'babys-revenge':
+				if (PlayState.isStoryMode) {
+					FlxG.sound.playMusic(Paths.music('babytheme'), 0.485);
+					FlxG.sound.music.fadeIn(1, 0, 0.8);
+				}
+			case 'un-adieu':
+				if (PlayState.isStoryMode) {
+					FlxG.sound.playMusic(Paths.music('babytheme'), 0.485);
+					FlxG.sound.music.fadeIn(1, 0, 0.8);
+				}
+			case 'temper-tantrum':
+				if (PlayState.isStoryMode) {
+					FlxG.sound.playMusic(Paths.music('babytheme'), 0.485);
+					FlxG.sound.music.fadeIn(1, 0, 0.8);
+				}
+			case 'trackstar':
+				if (PlayState.isStoryMode) {
+					FlxG.sound.playMusic(Paths.music('babytheme'), 0.485);
+					FlxG.sound.music.fadeIn(1, 0, 0.8);
+				}
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
@@ -92,6 +112,13 @@ class DialogueBox extends FlxSpriteGroup
 				box.setGraphicSize(Std.int(box.width * 1 * 0.9));
 				box.y = (FlxG.height - box.height) + 80;
 			case 'baby-blue':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByPrefix('normal', 'Speech Bubble Normal Open', 24, false);
+				box.setGraphicSize(Std.int(box.width * 1 * 0.9));
+				box.y = (FlxG.height - box.height) + 80;
+			case defualt:
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking');
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
@@ -199,6 +226,8 @@ class DialogueBox extends FlxSpriteGroup
 						case 'kidz-bop':
 							FlxG.sound.music.fadeOut(2.2, 0);
 						case 'baby-blue':
+							FlxG.sound.music.fadeOut(2.2, 0);
+						case defualt:
 							FlxG.sound.music.fadeOut(2.2, 0);
 					}
 
