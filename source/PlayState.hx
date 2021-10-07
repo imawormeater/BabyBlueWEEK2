@@ -341,6 +341,14 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('kidz-bop/dialogue'));
 			case 'baby-blue':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('baby-blue/dialogue'));
+			case 'babys-revenge':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('babys-revenge/dialogue'));
+			case 'un-adieu':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('un-adieu/dialogue'));
+			case 'temper-tantrum':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('temper-tantrum/dialogue'));
+			case 'trackstar':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('trackstar/dialogue'));
 				//retweet if your a child rapist :)
 		}
 
@@ -1133,6 +1141,14 @@ class PlayState extends MusicBeatState
 				case 'kidz-bop':
 					funnyIntro(doof);
 				case 'baby-blue':
+					funnyIntro(doof);
+				case 'babys-revenge':
+					funnyIntro(doof);
+				case 'un-adieu':
+					funnyIntro(doof);
+				case 'temper-tantrum':
+					funnyIntro(doof);
+				case 'trackstar':
 					funnyIntro(doof);
 				default:
 					startCountdown();
