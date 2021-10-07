@@ -1145,7 +1145,9 @@ class PlayState extends MusicBeatState
 				case 'babys-revenge':
 					funnyIntro(doof);
 				case 'un-adieu':
-					funnyIntro(doof);
+					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+					black.scrollFactor.set();
+					add(black);
 				case 'temper-tantrum':
 					funnyIntro(doof);
 				case 'trackstar':
@@ -1478,7 +1480,12 @@ class PlayState extends MusicBeatState
 			case 'Bopeebo' | 'Philly' | 'Blammed' | 'Cocoa' | 'Eggnog': allowedToHeadbang = true;
 			default: allowedToHeadbang = false;
 		}
-		
+		if (curSong == 'un-adieu')
+			{
+				var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+				black.scrollFactor.set();
+				add(black);
+			}
 		#if windows
 		// Updating Discord Rich Presence (with Time Left)
 		DiscordClient.changePresence(detailsText + " " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), "\nAcc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC);
@@ -3815,6 +3822,11 @@ class PlayState extends MusicBeatState
 				FlxG.camera.zoom += 0.3;
 				camHUD.zoom += 0.1;
 			}
+		if (curStep == 184 && curSong.toLowerCase() == 'un-adieu')
+			{
+				FlxG.camera.zoom += 0.3;
+				camHUD.zoom += 0.1;
+			}
 		// yes this updates every step.
 		// yes this is bad
 		// but i'm doing it to update misses and accuracy
@@ -3880,8 +3892,8 @@ class PlayState extends MusicBeatState
 		}
 		if (curSong.toLowerCase() == 'trackstar' && curBeat >= 208 && curBeat < 304)
 			{
-				FlxG.camera.zoom += 0.15;
-				camHUD.zoom += 0.05;
+				FlxG.camera.zoom += 0.10;
+				camHUD.zoom += 0.02;
 			}
 		
 		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
