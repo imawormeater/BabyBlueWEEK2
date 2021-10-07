@@ -473,6 +473,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -9, -49);
 		
 				playAnim('idle');
+			case 'alien':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/alien', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'alien', 24);
+				animation.addByPrefix('singUP', 'alien', 24);
+				animation.addByPrefix('singRIGHT', 'alien', 24);
+				animation.addByPrefix('singDOWN', 'alien', 24);
+				animation.addByPrefix('singLEFT', 'alien', 24);
+	
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+	
+				playAnim('idle');
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
 				frames = tex;

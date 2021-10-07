@@ -719,7 +719,7 @@ class PlayState extends MusicBeatState
 				{
 						curStage = 'street';
 						defaultCamZoom = 0.9;
-						var bg:FlxSprite = new FlxSprite(-300, -178).loadGraphic(Paths.image('street'));
+						var bg:FlxSprite = new FlxSprite(-420, -188).loadGraphic(Paths.image('street'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(1, 1);
 						bg.active = false;
@@ -859,6 +859,9 @@ class PlayState extends MusicBeatState
 				dad.y += 370;
 				dad.x += 200;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'alien':
+				dad.y += 230;
+				dad.x += 0;
 		}
 
 
@@ -880,6 +883,9 @@ class PlayState extends MusicBeatState
 			case 'street':
 				//WORK YOU COCK SUCKING MOTHERFUCKER
 				gf.y += -1200;
+				boyfriend.x += 240;
+				dad.x += 160;
+				dad.y += 17	;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 700;
@@ -3890,12 +3896,6 @@ class PlayState extends MusicBeatState
 		{
 			boyfriend.playAnim('hey', true);
 		}
-
-		if (curBeat % 16 == 15 && SONG.song == 'Tutorial' && dad.curCharacter == 'gf' && curBeat > 16 && curBeat < 48)
-			{
-				boyfriend.playAnim('hey', true);
-				dad.playAnim('cheer', true);
-			}
 
 		switch (curStage)
 		{

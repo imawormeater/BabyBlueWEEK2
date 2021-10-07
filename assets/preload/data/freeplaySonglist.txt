@@ -4,5 +4,6 @@ Kidz-Bop:baby:2
 Baby-Blue:baby:2
 Babys-Revenge:evil-baby:3
 Un-Adieu:evil-baby:3
+Temper-Tantrum:evil-baby:3
+Trackstar:running-goblin:3
 Gametoons:gametoons:4
-Trackstar:running-goblin:5
