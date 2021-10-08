@@ -1484,7 +1484,7 @@ class PlayState extends MusicBeatState
 		}
 		if (curSong == 'un-adieu')
 			{	
-				var dreamyThing:FlxSprite = new FlxSprite(-200, -100).loadGraphic(Paths.image('napSleep20013'));
+				var dreamyThing:FlxSprite = new FlxSprite(-150, -100).loadGraphic(Paths.image('napSleep20013'));
 				dreamyThing.scrollFactor.set();
 				add(dreamyThing);
 				wiggleShit.effectType = WiggleEffectType.DREAMY;
@@ -3861,6 +3861,92 @@ class PlayState extends MusicBeatState
 		if (curStep == 704 && curSong.toLowerCase() == 'un-adieu')
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 13, false);
+			}
+		//poop revenge
+		if (curStep == 40 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}
+		if (curStep == 41 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 42 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 43 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 44 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}		
+		if (curStep == 45 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}		
+		if (curStep == 46 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}		
+		if (curStep == 47 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}		
+		if (curStep == 56 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 57 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 58 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 59 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.05;
+				camHUD.zoom += 0.01;
+			}	
+		if (curStep == 60 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 61 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 62 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 63 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
+			}
+		if (curStep == 64 && curSong.toLowerCase() == 'babys-revenge')
+			{
+				FlxG.camera.zoom += 0.1;
+				camHUD.zoom += 0.1;
 			}
 		// yes this updates every step.
 		// yes this is bad

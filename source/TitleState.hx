@@ -166,7 +166,7 @@ class TitleState extends MusicBeatState
 
 		FlxTween.tween(bgLol, {y: bgLol.y + 10}, 2, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
 
-		logoBl = new FlxSprite(150, -20);
+		logoBl = new FlxSprite(150, -90);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
