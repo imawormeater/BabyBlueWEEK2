@@ -1483,10 +1483,16 @@ class PlayState extends MusicBeatState
 			default: allowedToHeadbang = false;
 		}
 		if (curSong == 'un-adieu')
-			{
-				var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
-				black.scrollFactor.set();
-				add(black);
+			{	
+				var dreamyThing:FlxSprite = new FlxSprite(-200, -100).loadGraphic(Paths.image('napSleep20013'));
+				dreamyThing.scrollFactor.set();
+				add(dreamyThing);
+				wiggleShit.effectType = WiggleEffectType.DREAMY;
+				wiggleShit.waveAmplitude = 0.1;
+				wiggleShit.waveFrequency = 2;
+				wiggleShit.waveSpeed = 1;
+				dreamyThing.shader = wiggleShit.shader;
+				camera.flash(FlxColor.BLACK, 21);
 			}
 		#if windows
 		// Updating Discord Rich Presence (with Time Left)
@@ -1946,8 +1952,8 @@ class PlayState extends MusicBeatState
 					}
 				}
 				// phillyCityLights.members[curLight].alpha -= (Conductor.crochet / 1000) * FlxG.elapsed;
-		}
-
+		}	
+		wiggleShit.update(elapsed);
 		super.update(elapsed);
 
 		scoreTxt.text = Ratings.CalculateRanking(songScore,songScoreDef,nps,maxNPS,accuracy);
@@ -2213,6 +2219,8 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 65;
 					case 'gametoons':
 						camFollow.y = dad.getMidpoint().y + 30;
+					case 'evil-baby':
+						camFollow.y = dad.getMidpoint().y - 20;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -3843,6 +3851,10 @@ class PlayState extends MusicBeatState
 				FlxG.camera.zoom += 0.3;
 				camHUD.zoom += 0.1;
 			}
+		if (curStep == 704 && curSong.toLowerCase() == 'un-adieu')
+			{
+				FlxG.camera.fade(FlxColor.BLACK, 13, false);
+			}
 		// yes this updates every step.
 		// yes this is bad
 		// but i'm doing it to update misses and accuracy
@@ -3898,7 +3910,6 @@ class PlayState extends MusicBeatState
 				dad.dance();
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
-		wiggleShit.update(Conductor.crochet);
 
 		// HARDCODING FOR MILF ZOOMS!
 		if (curSong.toLowerCase() == 'milf' && curBeat >= 168 && curBeat < 200 && camZooming && FlxG.camera.zoom < 1.35)
@@ -3917,6 +3928,11 @@ class PlayState extends MusicBeatState
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
+
+		if (curSong.toLowerCase() == 'babys-revenge' && curBeat == 48)
+			{
+				camZooming = true;
+			}
 
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
 		iconP2.setGraphicSize(Std.int(iconP2.width + 30));
