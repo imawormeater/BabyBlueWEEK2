@@ -1148,7 +1148,7 @@ class PlayState extends MusicBeatState
 					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 					black.scrollFactor.set();
 					add(black);
-					startCountdown();
+					funnyIntro(doof);
 				case 'temper-tantrum':
 					funnyIntro(doof);
 				case 'trackstar':
