@@ -2626,28 +2626,21 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					if (curSong.toLowerCase() == 'trackstar')
+                    if (curSong.toLowerCase() == "trackstar")
 					{
 						FlxG.switchState(new EndState());
 					}
 					else
 					{
-					FlxG.sound.playMusic(Paths.music('menu_music_1'));
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-					transIn = FlxTransitionableState.defaultTransIn;
-					transOut = FlxTransitionableState.defaultTransOut;
+						transIn = FlxTransitionableState.defaultTransIn;
+						transOut = FlxTransitionableState.defaultTransOut;
 
-					FlxG.switchState(new StoryMenuState());
-			     	}
-					#if windows
-					if (luaModchart != null)
-					{
-						luaModchart.die();
-						luaModchart = null;
+						FlxG.switchState(new StoryMenuState());
+
+						// if ()
 					}
-					#end
-				    }
-					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
 
 					if (SONG.validScore)
@@ -2659,7 +2652,7 @@ class PlayState extends MusicBeatState
 					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
 					FlxG.save.flush();
 				}
-			else
+			    else
 				{
 					var difficulty:String = "";
 
