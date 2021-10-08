@@ -35,7 +35,7 @@ class StoryMenuState extends MusicBeatState
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
 		['dad', 'bf', 'gf'],
-		['dad', 'bf', 'gf']
+		['spooky', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [

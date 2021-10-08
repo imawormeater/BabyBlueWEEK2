@@ -163,6 +163,7 @@ class PlayState extends MusicBeatState
 	var trainSound:FlxSound;
 
 	var limo:FlxSprite;
+	var goblinDeath:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
 	var songName:FlxText;
@@ -3823,6 +3824,20 @@ class PlayState extends MusicBeatState
 				FlxG.camera.zoom += 0.3;
 				camHUD.zoom += 0.1;
 			}
+		if (curStep == 1599 && curSong.toLowerCase() == 'trackstar')
+				{
+					dad.visible = false;
+					var goblinDeathTex = Paths.getSparrowAtlas('goblindeath');
+	
+					goblinDeath = new FlxSprite(-960, 270);
+					goblinDeath.frames = goblinDeathTex;
+					goblinDeath.animation.addByPrefix('drive', "goblin death", 24);
+					goblinDeath.antialiasing = true;
+					add(goblinDeath);
+					goblinDeath.animation.play('drive');
+					FlxG.sound.play(Paths.sound('baba'));
+				}
+		//un adieu, i actucally added this on acident but it turned out good
 		if (curStep == 184 && curSong.toLowerCase() == 'un-adieu')
 			{
 				FlxG.camera.zoom += 0.3;
