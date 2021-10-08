@@ -161,7 +161,7 @@ class MainMenuState extends MusicBeatState
 
 		if (poop == 4)
 		{
-			FlxG.switchState(new CrashState());
+			FlxG.switchState(new EndState());
 		}
 
 		if (!selectedSomethin)

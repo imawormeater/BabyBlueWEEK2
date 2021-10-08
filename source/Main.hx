@@ -74,7 +74,7 @@ class Main extends Sprite
 		}
 
 		#if !debug
-		initialState = TitleState;
+		initialState = EndState;
 		#end
 
 		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);

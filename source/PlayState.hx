@@ -2611,7 +2611,7 @@ class PlayState extends MusicBeatState
 
 		if (offsetTesting)
 		{
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			FlxG.sound.playMusic(Paths.music('menu_music_1'));
 			offsetTesting = false;
 			LoadingState.loadAndSwitchState(new OptionsMenu());
 			FlxG.save.data.offset = offsetTest;
@@ -2626,13 +2626,19 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					if (curSong.toLowerCase() == 'trackstar')
+					{
+						FlxG.switchState(new EndState());
+					}
+					else
+					{
+					FlxG.sound.playMusic(Paths.music('menu_music_1'));
 
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					FlxG.switchState(new StoryMenuState());
-
+			     	}
 					#if windows
 					if (luaModchart != null)
 					{
@@ -2640,7 +2646,7 @@ class PlayState extends MusicBeatState
 						luaModchart = null;
 					}
 					#end
-
+				    }
 					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
 
@@ -2653,7 +2659,7 @@ class PlayState extends MusicBeatState
 					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
 					FlxG.save.flush();
 				}
-				else
+			else
 				{
 					var difficulty:String = "";
 
@@ -2681,10 +2687,18 @@ class PlayState extends MusicBeatState
 					FlxTransitionableState.skipNextTransOut = true;
 					prevCamFollow = camFollow;
 
+                    var tempSong:String = SONG.song.toLowerCase();
+
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
 
-					LoadingState.loadAndSwitchState(new PlayState());
+					if (tempSong == 'babys-revenge') 
+					{
+						LoadingState.loadAndSwitchState(new VideoState(Paths.video('babycut2'), new PlayState()));
+					} else 
+					{
+						LoadingState.loadAndSwitchState(new PlayState());
+					}
 				}
 			}
 			else
